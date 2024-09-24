@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    color: black;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main img{
+    width: 150px;
+    margin: 30px 40px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+    
+}
+nav ul li {
+    list-style: none;
+    font-family: fantasy;
+}
+nav ul li a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    padding: 10px;
+    
+}
+nav ul li a::before{
+    content: '';
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    z-index: -1;
+    background-color: #d9f688;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: height 0.5s;
+}
+nav ul li a:hover:before{
+    height: 75px;
+}
+
+main .menu img{
+    width: 60px;
+    margin-right: 150px;
+}
+#content{
+    display: flex;
+    flex-wrap: wrap;
+}
+#content h3{
+    font-family: monospace;
+    margin-top: 200px;
+    margin-left: 80px;
+    font-size: 30px;
+    text-align: center;
+}
+#content a
+{
+    margin-left: 200px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    top: 50px;
+    padding: 15px 25px;
+    background-color: #d9f688;
+    border-radius: 20px;
+}
+.food{
+    flex-basis: 50%;
+    position: relative;
+}
+.one{
+    height: 700px;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 280px;
+    animation: flicker-1 2s linear infinite both;
+    flex-wrap: wrap;
+}
+@-webkit-keyframes flicker-1 {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    41.99% {
+      opacity: 1;
+    }
+    42% {
+      opacity: 0;
+    }
+    43% {
+      opacity: 0;
+    }
+    43.01% {
+      opacity: 1;
+    }
+    47.99% {
+      opacity: 1;
+    }
+    48% {
+      opacity: 0;
+    }
+    49% {
+      opacity: 0;
+    }
+    49.01% {
+      opacity: 1;
+    }
+  }
+  @keyframes flicker-1 {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    41.99% {
+      opacity: 1;
+    }
+    42% {
+      opacity: 0;
+    }
+    43% {
+      opacity: 0;
+    }
+    43.01% {
+      opacity: 1;
+    }
+    47.99% {
+      opacity: 1;
+    }
+    48% {
+      opacity: 0;
+    }
+    49% {
+      opacity: 0;
+    }
+    49.01% {
+      opacity: 1;
+    }
+  }
+.two{
+    width: 280px;
+    position: absolute;
+    bottom: 50px;
+    left: 320px;
+    box-shadow: 5px 8px 10px gray;
+    animation: son 5s linear infinite;
+    opacity: 0;
+    flex-wrap: wrap;
+}
+@keyframes son {
+  0% {
+    transform: translateX(-800px);
+      opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+      opacity: 3;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:950px)
+{
+  main .menu img{
+    display: none;
+  }
+  #content{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #content h3{
+    margin-top: 100px;}
+  
+  #content .food .one{
+    height: 600px;
+    width: 80%;
+    margin-top: 120px;
+    margin-left: 80px;
+  }
+  .two{
+    width: 280px;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    animation: son 5s linear infinite;
+    opacity: 0;
+}
+@keyframes son {
+  0% {
+    transform: translateX(-800px);
+      opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+      opacity: 3;
+  }
+}
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:480px)
+{
+  main .menu img{
+    display: none;
+  }
+  #content h3{
+    margin-top: 100px;
+    margin-left: 80px;
+    font-size: 25px;
+
+}
+#content a
+{
+    margin-left: 150px;
+    row-gap: 10px;
+    
+}
+  #content .food .one{
+    height: 800px;
+    width: 600px;
+    margin-top: 100px;
+    margin-left: 100px;
+  }
+  .two{
+    width: 280px;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    animation: son 5s linear infinite;
+    opacity: 0;
+}
+@keyframes son {
+  0% {
+    transform: translateX(-200px);
+      opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+      opacity: 3;
+  }
+}
+
+
+}
